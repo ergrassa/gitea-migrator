@@ -1,0 +1,11 @@
+version: '3'
+services:
+  migrator:
+    image: ergrassa/gitea-migrator
+    environment:
+      - GITHUB_TOKEN=GITHUB_ACCESS_TOKEN
+      - GITEA_TOKEN=GITEA_ACCESS_TOKEN
+      - GITEA_URL=https://gitea.example.com
+      - GITEA_ORG=foo_organization
+      - GITHUB_ORG=baz_organization
+      - CRON_SPEC=0 0 * * * 1
